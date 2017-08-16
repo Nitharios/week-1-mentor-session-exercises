@@ -6,6 +6,18 @@
  * ie: "cat" => "tac"
  */
 
+function firstReverse (str) {
+	
+	if (typeof str === 'string') {
+		var reversed = str.split('').reverse().join('')
+		return reversed
+	}
+
+	else {
+		return null
+	}
+}
+
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
  * return the string in alphabetical order
@@ -56,7 +68,7 @@
  */
 
 module.exports = {
-    firstReverse: null,
+    firstReverse: firstReverse,
     alphaOrder: null,
     vowelCount: null,
     timeConvert: null,
