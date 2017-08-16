@@ -49,6 +49,19 @@ function alphaOrder (str) {
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+function vowelCount (str) {
+
+	if (typeof str === 'string') {
+
+		var count = str.match(/[aeiou]/ig).length //regex search for vowels with case insensitive (i) and global (g) guidelines
+		return count
+
+	} else {
+
+		return null 
+
+	}
+}
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -86,7 +99,7 @@ function alphaOrder (str) {
 module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
-    vowelCount: null,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
