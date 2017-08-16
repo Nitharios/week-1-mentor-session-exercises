@@ -49,6 +49,7 @@ function alphaOrder (str) {
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+
 function vowelCount (str) {
 
 	if (typeof str === 'string') {
@@ -71,6 +72,24 @@ function vowelCount (str) {
  * @return {string} as hours:minutes
  * ie: 68 => 1:8
  */
+
+function timeConvert (num) {
+
+	if (typeof num === 'number') {
+
+		var totalMinutes = parseInt(num)
+		var hours = Math.floor(totalMinutes / 60)
+		var minutes = totalMinutes % 60
+
+		return hours + ':' + minutes
+
+	} else {
+
+		return null
+
+	}
+
+}
 
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
@@ -100,6 +119,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 }
